@@ -253,3 +253,45 @@ img {
     right: 0;
   }
 }
+
+// ===== HOME SECTION =====
+.home {
+  &__container {
+    padding: 8rem 0 5rem;
+  }
+
+  &__content {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__data {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: $font-bold;
+    color: $black-color;
+    line-height: $leading-title;
+    margin-bottom: $margin-1;
+  }
+
+  &__text {
+    font-size: 15px;
+    color: $black-color;
+    line-height: $leading-text;
+    margin-bottom: $margin-2;
+  }
+
+  &__sponsored {
+    display: inline-flex;
+    align-items: center;
+    justify-self: center;
+    gap: 1rem;
+
+    &-icon {
+      width: 80px;
+    }
+  }
+}
