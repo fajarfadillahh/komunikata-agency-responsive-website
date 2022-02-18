@@ -1,0 +1,255 @@
+// ===== FONT GOOGLE =====
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+// ===== VARIABLES CSS =====
+// header height
+$header-height: 6rem;
+
+// color palette
+$white-color: #fff;
+$black-color: #02073e;
+$dark-grey-color: #343d48;
+$green-color: #28dcb2;
+$blue-color: #4f96ff;
+
+// font body
+$font-body: "DM Sans", sans-serif;
+
+// font weight
+$font-reguler: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+// margin
+$margin-0-5: 0.5rem;
+$margin-1: 1rem;
+$margin-1-5: 1.5rem;
+$margin-2: 2rem;
+$margin-2-5: 2.5rem;
+$margin-3: 3rem;
+$margin-3-5: 3.5rem;
+$margin-4: 4rem;
+
+// z-index
+$z-back: -10;
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;
+
+// transition
+$transition-300: 0.3s;
+$transition-400: 0.4s;
+
+// line-height
+$leading-title: 1.5;
+$leading-text: 1.87;
+
+// ===== BASE & RESET =====
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  font-weight: $font-reguler;
+}
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+input,
+button {
+  font-family: $font-body;
+  font-weight: $font-reguler;
+  outline: none;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// ===== REUSABLES CSS CLASS =====
+.container {
+  max-width: 1024px;
+  width: calc(100% - 3rem);
+  margin: 0 $margin-1-5;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+
+  &-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: $font-bold;
+    color: $black-color;
+    line-height: $leading-title;
+  }
+
+  &-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: $black-color;
+    line-height: $leading-text;
+  }
+}
+
+.button {
+  font-size: 15px;
+  font-weight: $font-medium;
+
+  &-fill {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: $green-color;
+    border-radius: 1rem;
+    color: $white-color;
+    transition: $transition-400;
+    box-shadow: 0 8px 20px rgba($color: #000000, $alpha: 0.1);
+
+    &:hover {
+      background-color: #27cea7;
+      box-shadow: 0 8px 20px rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+
+  &-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $blue-color;
+
+    i {
+      font-size: 1.1rem;
+      transition: $transition-400;
+    }
+
+    &:hover {
+      i {
+        transform: translateX(8px);
+      }
+    }
+  }
+}
+
+// ===== HEADER SECTION =====
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  z-index: $z-fixed;
+  transition: $transition-400;
+
+  &__container {
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: $font-bold;
+    color: $black-color;
+
+    &-icon {
+      width: 25px;
+    }
+  }
+
+  &__menu {
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      width: 80%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      background-color: $white-color;
+      padding: 2rem 0;
+      display: grid;
+      gap: 2rem;
+      grid-template-rows: repeat(2, max-content);
+      box-shadow: -2px 0 8px rgba($color: #000000, $alpha: 0.1);
+      transition: $transition-400;
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem 0 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    min-height: 48px;
+    background: transparent;
+    font-size: 15px;
+    color: $black-color;
+
+    &.active-link {
+      position: relative;
+      font-weight: $font-medium;
+      color: $green-color;
+      background-color: #f8f8f8;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $green-color;
+      }
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+    margin: 0 1.5em 0 2rem;
+  }
+
+  &__toggle,
+  &__close {
+    display: inline-flex;
+    font-size: 1.5rem;
+    color: $black-color;
+    cursor: pointer;
+  }
+
+  // Show Header Menu
+  .show-menu {
+    right: 0;
+  }
+}
