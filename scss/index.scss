@@ -482,3 +482,49 @@ img {
     }
   }
 }
+
+// ===== WIDGETS SECTION =====
+.widgets {
+  &__container {
+    gap: 3rem;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: $font-bold;
+    color: $black-color;
+    line-height: $leading-title;
+    margin-bottom: $margin-1;
+  }
+
+  &__text {
+    font-size: 15px;
+    color: $black-color;
+    line-height: $leading-text;
+    margin-bottom: $margin-1;
+  }
+
+  &__list {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: $margin-2;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 15px;
+    font-weight: $font-medium;
+    color: $black-color;
+
+    &-icon {
+      display: inline-flex;
+      padding: 0.2rem;
+      background-color: $green-color;
+      border-radius: 50%;
+      color: $white-color;
+      font-size: 1rem;
+    }
+  }
+}
