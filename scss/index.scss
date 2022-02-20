@@ -528,3 +528,119 @@ img {
     }
   }
 }
+
+// ===== PRICING SECTION =====
+.pricing {
+  &__container {
+    gap: 3rem;
+  }
+
+  &__switch {
+    display: inline-flex;
+    justify-self: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f7f8fb;
+    border-radius: 0.5rem;
+
+    &-button {
+      padding: 1rem 2rem;
+      background-color: $white-color;
+      border-radius: 0.5rem;
+      font-size: 15px;
+      font-weight: $font-bold;
+      color: $black-color;
+      box-shadow: 2px 0 8px rgba($color: #000000, $alpha: 0.1);
+      cursor: pointer;
+    }
+
+    &-button:nth-of-type(2) {
+      position: relative;
+      background: transparent;
+      box-shadow: none;
+
+      &::before {
+        position: absolute;
+        content: "SAVE 20%";
+        top: -1.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.4rem;
+        background-color: $green-color;
+        border-radius: 5rem;
+        font-size: 12px;
+        font-weight: $font-bold;
+        color: $white-color;
+      }
+    }
+  }
+
+  &__item {
+    grid-template-rows: repeat(2, max-content);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1.5px solid #f3f4f5;
+    transition: $transition-400;
+
+    &:hover {
+      border-color: $green-color;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: $font-bold;
+      color: $black-color;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      font-size: 15px;
+      color: $dark-grey-color;
+    }
+
+    &-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    &-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 15px;
+      color: $black-color;
+      line-height: $leading-text;
+    }
+
+    &-icon {
+      display: inline-flex;
+      padding: 0.2rem;
+      background-color: $green-color;
+      border-radius: 50%;
+      color: $white-color;
+      font-size: 1rem;
+    }
+
+    &-button {
+      align-self: center;
+    }
+  }
+
+  &__item:nth-of-type(2) {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "Recommended";
+      top: -1rem;
+      right: 2rem;
+      padding: 0.4rem;
+      background-color: #ef9e48;
+      border-radius: 0.5rem;
+      font-size: 15px;
+      font-weight: $font-bold;
+      color: $white-color;
+    }
+  }
+}
