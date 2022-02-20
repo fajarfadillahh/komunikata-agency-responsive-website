@@ -443,3 +443,42 @@ img {
     }
   }
 }
+
+// ===== ALL FEATURES SECTION ======
+.all-features {
+  background-color: #f9fafc;
+
+  &__container {
+    gap: 3rem;
+  }
+
+  &__group {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+
+    &-icon {
+      width: 90px;
+      border-radius: 50%;
+      align-self: flex-start;
+      box-shadow: 0 8px 20px rgba($color: #000000, $alpha: 0.1);
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: $font-bold;
+      color: $black-color;
+      margin-bottom: $margin-1;
+    }
+
+    &-text {
+      font-size: 15px;
+      color: $dark-grey-color;
+      line-height: $leading-text;
+    }
+  }
+}
