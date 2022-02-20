@@ -644,3 +644,93 @@ img {
     }
   }
 }
+
+// ===== FAQ SECTION =====
+.faq {
+  &__container {
+    gap: 3rem;
+  }
+
+  &__accordion {
+    gap: 2rem;
+
+    &-item {
+      border: 1.5px solid #f3f4f5;
+      border-radius: $margin-1;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    &-title {
+      font-size: 15px;
+      font-weight: $font-medium;
+      color: $black-color;
+      line-height: $leading-title;
+    }
+
+    &-icon {
+      display: inline-flex;
+      font-size: 1.2rem;
+      padding: 0.1rem;
+      background-color: $green-color;
+      border-radius: 50%;
+      color: $white-color;
+    }
+
+    &-content {
+      overflow: hidden;
+      height: 0;
+    }
+
+    &-text {
+      font-size: 15px;
+      color: $dark-grey-color;
+      padding: 1rem 1.5rem;
+      line-height: $leading-text;
+    }
+
+    &-item,
+    &-header,
+    &-title,
+    &-icon,
+    &-content,
+    &-text {
+      transition: $transition-400;
+    }
+  }
+
+  // Accordion FAQ Section
+  .accordion-open {
+    & .faq__accordion-header,
+    & .faq__accordion-content {
+      background-color: $green-color;
+      border-color: $green-color;
+    }
+
+    & .faq__accordion-header {
+      border-radius: $margin-1 $margin-1 0 0;
+    }
+    & .faq__accordion-content {
+      border-radius: 0 0 $margin-1 $margin-1;
+    }
+
+    & .faq__accordion-title,
+    & .faq__accordion-text {
+      color: $white-color;
+    }
+
+    & .faq__accordion-icon {
+      transform: rotate(45deg);
+      background-color: $white-color;
+      color: $green-color;
+    }
+  }
+}
