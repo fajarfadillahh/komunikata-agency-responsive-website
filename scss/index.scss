@@ -795,3 +795,30 @@ img {
     line-height: $leading-text;
   }
 }
+
+// ===== SCROLLUP SECTION =====
+.scrollup {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 3rem;
+  display: inline-flex;
+  padding: 0.5rem;
+  background-color: rgba($color: #28dcb2, $alpha: 0.8);
+  border-radius: 0.5rem;
+  color: $white-color;
+  opacity: 0;
+  transition: $transition-400;
+
+  &:hover {
+    background-color: rgba($color: #28dcb2, $alpha: 1);
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+  }
+
+  // Scrollup Active
+  &.scroll-active {
+    opacity: 1;
+  }
+}
