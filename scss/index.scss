@@ -734,3 +734,59 @@ img {
     }
   }
 }
+
+// ===== FOOTER SECTION =====
+.footer {
+  padding: 5rem 0 3rem;
+  background-color: #f9fafc;
+
+  &__container {
+    gap: 3rem;
+  }
+
+  &__group {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  &__logo {
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    &-title {
+      font-size: 20px;
+      font-weight: $font-bold;
+      color: $black-color;
+      margin-bottom: $margin-1;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &-link {
+      &:hover {
+        color: $green-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__text,
+  &__item-link {
+    font-size: 15px;
+    color: $dark-grey-color;
+    line-height: $leading-text;
+  }
+
+  &__copy {
+    padding-top: 3rem;
+    border-top: 1.5px solid #f3f4f5;
+    font-size: 15px;
+    color: $dark-grey-color;
+    text-align: center;
+    line-height: $leading-text;
+  }
+}
