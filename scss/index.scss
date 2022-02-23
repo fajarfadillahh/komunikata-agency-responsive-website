@@ -822,3 +822,29 @@ img {
     opacity: 1;
   }
 }
+
+// ===== MEDIA QUERIES =====
+// ----- Width 485px -----
+@media screen and (min-width: 485px) {
+  .home__data,
+  .features__data,
+  .stats__data,
+  .video__data,
+  .all-features__data,
+  .widgets__data,
+  .pricing__data,
+  .faq__data {
+    width: 430px;
+    justify-self: center;
+  }
+
+  .home__button {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .pricing__item {
+    width: 345px;
+    justify-self: center;
+  }
+}
