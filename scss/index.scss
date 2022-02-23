@@ -865,3 +865,50 @@ img {
     justify-self: center;
   }
 }
+
+// ----- Width 767px -----
+@media screen and (min-width: 767px) {
+  // ===== HEADER SECTION =====
+  .header {
+    &__container {
+      position: relative;
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+    }
+
+    &__list {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 2rem;
+      flex-direction: row;
+    }
+
+    &__link {
+      padding-left: 0;
+      min-height: 0;
+
+      &.active-link {
+        position: relative;
+        background-color: transparent;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &__data,
+    &__toggle,
+    &__close {
+      display: none;
+    }
+
+    &__button {
+      margin: 0;
+    }
+  }
+}
