@@ -915,6 +915,18 @@ img {
       margin: 0;
     }
   }
+
+  .pricing {
+    &__group {
+      width: 800px;
+      display: inline-flex;
+      justify-self: center;
+    }
+
+    &__item {
+      width: auto;
+    }
+  }
 }
 
 // ----- Width 968px -----
